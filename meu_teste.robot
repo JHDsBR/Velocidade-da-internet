@@ -2,11 +2,8 @@
 Documentation       Verificar velocidade da internet
 Library             SeleniumLibrary
 
-
 *** Variables ***
-
 ${input_search}         id:APjFqb
-
 ${BROWSER}              chrome
 ${BASE_URL}             https://www.google.com/
 ${valor_atributo}       fast.com.br
@@ -25,7 +22,6 @@ Verificar velocidade
     Esperar calcular velocidade
     Pegar resultado
     Mostrar resultado
-
 
 *** Keywords ***
 
@@ -59,11 +55,7 @@ Clicar em Fast.com
         END
     END
 
-Teste simples
-    
-    IF    'fast.com' in '${valor_atributo}'
-        Log     SIM
-    END
+
 
 Esperar Carregar
     Wait Until Page Contains Element    css=body    timeout=10s
@@ -82,5 +74,5 @@ Pegar resultado
     Set Test Variable       ${speed_result}     # permite que essa variável seja acessada em outras keywords
 
 Mostrar resultado
-    Log     ${speed_result}
+    Log     Sua velocidade é: ${speed_result}
 
