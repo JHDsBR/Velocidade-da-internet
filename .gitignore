@@ -1,0 +1,5 @@
+venv/
+*.env
+*.html
+*.log
+*.xml
